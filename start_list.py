@@ -49,9 +49,13 @@ def start_list(all_players, num_in_flight, num_day_played):
             print(flight(list(set(conditions[j])), flight_list[j]))
 
 num_in_flight = 4
+if num_in_flight != 4:
+    raise ValueError('out of seize of flight limit')
 num_days_played = 5
+if num_days_played >5 or num_days_played <2:
+    raise ValueError('out of playing days limit')
 all_players = list('abcdefghijklmnop')
-start_list(all_players, num_in_flight , num_days_played)
+start_list(all_players,num_in_flight , num_days_played)
 
 
 
